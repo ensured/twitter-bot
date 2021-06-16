@@ -1,3 +1,10 @@
+# your api details go here ↓↓↓
+api_key = ""
+api_secret = ""
+access_token = ""
+access_token_secret = ""
+
+
 # blacklisted people here
 blacklisted_usernames = (
     "adawow_io",
