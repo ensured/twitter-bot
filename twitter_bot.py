@@ -3,13 +3,14 @@ from time import sleep
 import os
 import json
 import datetime
-from config import blacklisted_hashtags, blacklisted_usernames
-
-# your api details go here ↓↓↓
-api_key = ""
-api_secret = ""
-access_token = ""
-access_token_secret = ""
+from config import (
+    blacklisted_hashtags,
+    blacklisted_usernames,
+    api_key,
+    api_secret,
+    access_token,
+    access_token_secret,
+)
 
 auth = tw.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_token_secret)
