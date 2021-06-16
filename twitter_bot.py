@@ -9,6 +9,13 @@ from config import (
     api_secret,
     access_token,
     access_token_secret,
+    search_a,
+    search_b,
+    search_c,
+    search_d,
+    search_e,
+    search_f,
+    amount_of_posts_to_get,
 )
 
 auth = tw.OAuthHandler(api_key, api_secret)
