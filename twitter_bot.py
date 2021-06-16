@@ -76,8 +76,6 @@ def fav_and_retweet():
                     sleep(180)
                 except tw.TweepError:
                     pass
-                except TweepError:
-                    pass
                 except:
                     pass
         except tw.TweepError:
