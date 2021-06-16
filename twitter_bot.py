@@ -15,20 +15,6 @@ auth = tw.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-# amount of posts to get before rerunning the function 'fav_and_retweet()'
-amount_of_posts_to_get = (
-    10  # larger the number the farther back the tweets you get (time wise)
-)
-
-# enter as many hashtags here as you want
-search_a = "#CardanoNFT"
-search_b = "#ADA"
-search_c = "#Cardano"
-search_d = "#CardanoCommunity"
-search_e = "#CardanoFamily"
-search_f = "#CNTF"
-
-
 def fav_and_retweet():
     for tweet in tw.Cursor(
         api.search,
