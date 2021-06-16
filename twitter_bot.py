@@ -49,11 +49,9 @@ def fav_and_retweet():
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
                 a = a["retweeted_status"]["full_text"]
-                print(a)
                 sleep(2)
             else:
                 a = a["full_text"]
-                print(a)
                 sleep(2)
 
             # filter only tweets that contain 1 or more blacklisted hashtag
