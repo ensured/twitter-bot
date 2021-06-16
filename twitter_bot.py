@@ -1,8 +1,7 @@
 import tweepy as tw
 from time import sleep
-import os
 import json
-import datetime
+# import datetime
 from config import (
     blacklisted_hashtags,
     blacklisted_usernames,
