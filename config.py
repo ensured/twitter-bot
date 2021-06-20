@@ -1,3 +1,6 @@
+# your twitter username goes here
+twitter_username = ""
+
 # your api details go here ↓↓↓
 api_key = ""
 api_secret = ""
