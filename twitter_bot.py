@@ -19,6 +19,7 @@ from config import (
     search_e,
     search_f,
     amount_of_posts_to_get,
+    query
 )
 
 auth = tw.OAuthHandler(api_key, api_secret)
@@ -29,7 +30,7 @@ api = tw.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 def fav_and_retweet():
     for tweet in tw.Cursor(
         api.search,
-        q=f"{search_a} OR {search_b} OR {search_c} OR {search_d} OR {search_e} OR {search_f}",
+        q=query,
         lang="en",
     ).items(amount_of_posts_to_get):
         sleep(1)
