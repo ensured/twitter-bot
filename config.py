@@ -16,19 +16,72 @@ search_d = "#CardanoCommunity"
 search_e = "#CardanoFamily"
 search_f = "#CNTF"
 
-# blacklisted people here
-blacklisted_usernames = (
-    "Nathan_Combs_",
-    "LacedWhales",
-    "adawow_io",
-    "LacedWhales",
-    "AdaDarkPool",
-    "CardanoPriceUpdates",
+
+whitelisted_usernames_unfollow_script = (
+    "CardanoMonsters",
+    "adapools_org",
+    "cardano_updates",
+    "_mermada",
+    "CardanoStiftung",
+    "YoroiWallet",
+    "cardacitynft",
 )
 
-# hashtags to blacklist
-blacklisted_hashtags = (
-    # "RT @",
+
+# hashtags to blacklist (doesn't have to be hashtag, can be keyword)
+blacklisted_hashtags_for_twitter_bot = (
+    "fiewin.com",
+    "#Corona",
+    "Price:",
+    "#SAFEMOON",
+    "Change in 1hr",
+    "Market cap:",
+    "#studyplus",
+    "#COVID",
+    "#Trending",
+    "#Newsnight",
+    "#BreakingNews",
+    "#Rajouri",
+    "#JJK",
+    "#Kishtwar",
+    "#Covid_19",
+    "#Covid19",
+    "#Vaccine",
+    "#Poonch",
+    "#IndianArmy",
+    "#JK",
+    "#Blood",
+    "ADA Compliant",
+    "#Disability",
+    "#disability",
+    "#Defund",
+    "no one uses #Cardano",
+    "no one uses Cardano",
+    "no one uses cardano",
+    "#websiteaccessability",
+    "#americanswithdisabilitiesact",
+    "#Binance",
+    "#BNB",
     "#DOGE",
-    "#doge",
+)
+
+# blacklisted people here
+blacklisted_usernames_for_twitter_bot = (
+    "topstonks",
+    "chaintoday1",
+    "CardanoPoolPeek",
+    "adawow_io",
+    "LacedWhales",
+    "Nathan_Combs_",
+    "AdaDarkPool",
+    "CardanoPriceUpdates",
+    "BalanceOt",
+    "LacedWhales",
+    "topcryptostats",
+)
+
+blacklisted_usernames_follow_unfollow_scripts = (
+    "NewCryptoBonus1",
+    "DesireRugema",
+    "doctorkevin",
 )
