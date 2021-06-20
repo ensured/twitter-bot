@@ -16,7 +16,7 @@ search_d = "#CardanoCommunity"
 search_e = "#CardanoFamily"
 search_f = "#CNTF"
 
-
+# for people who don't follow you back but you don't want to unfollow
 whitelisted_usernames_unfollow_script = (
     "CardanoMonsters",
     "adapools_org",
@@ -26,7 +26,12 @@ whitelisted_usernames_unfollow_script = (
     "YoroiWallet",
     "cardacitynft",
 )
-
+# for people who you want nothing to do with :)
+blacklisted_usernames_follow_unfollow_scripts = (
+    "NewCryptoBonus1",
+    "DesireRugema",
+    "doctorkevin",
+)
 
 # hashtags to blacklist (doesn't have to be hashtag, can be keyword)
 blacklisted_hashtags_for_twitter_bot = (
@@ -78,10 +83,4 @@ blacklisted_usernames_for_twitter_bot = (
     "BalanceOt",
     "LacedWhales",
     "topcryptostats",
-)
-
-blacklisted_usernames_follow_unfollow_scripts = (
-    "NewCryptoBonus1",
-    "DesireRugema",
-    "doctorkevin",
 )
