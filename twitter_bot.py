@@ -19,7 +19,7 @@ from config import (
     search_e,
     search_f,
     amount_of_posts_to_get,
-    query
+    search_query,
 )
 
 auth = tw.OAuthHandler(api_key, api_secret)
