@@ -12,13 +12,13 @@ access_token_secret = ""
 amount_of_posts_to_get = 15
 
 # enter as many hashtags here as you want (may need to update twitter_bot.py with the added or removed values)
-query = f"{search_a} OR {search_b} OR {search_c} OR {search_d} OR {search_e} OR {search_f}"
 search_a = "#CardanoNFT"
 search_b = "#ADA"
 search_c = "#Cardano"
 search_d = "#CardanoCommunity"
 search_e = "#CardanoFamily"
 search_f = "#CNTF"
+search_query = f"{search_a} OR {search_b} OR {search_c} OR {search_d} OR {search_e} OR {search_f}"
 
 
 # for people who don't follow you back but you don't want to unfollow
