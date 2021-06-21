@@ -38,7 +38,7 @@ def autofollow():
 if __name__ == "__main__":
     while True:
         autofollow()
-        print("(sleeping 300 seconds)")
+        print("(sleeping 900 seconds)")
         import sys
         import time
         from os import system
