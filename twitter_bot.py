@@ -70,11 +70,11 @@ def fav_and_retweet():
                 a = a["full_text"]
 
             # filter only tweets that contain 1 or more blacklisted hashtag
-            hashtags = [
+            hashtags = {
                 hashtag
                 for hashtag in blacklisted_hashtags_for_twitter_bot
                 if hashtag in a
-            ]
+            }
             if len(hashtags) >= 1:
                 print(f"🔴 {hashtags} found in @{tweet.user.screen_name}'s Tweet")
                 continue
