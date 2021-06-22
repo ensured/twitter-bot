@@ -31,11 +31,10 @@ friends = api.friends_ids(twitter_username)
 def auto_unfollow():
     # todays_unfollowers = []
     '''
-    this basically tells twitter I want to get all users after the first 50, 
-    you can remove this index if you want and just whitelist everyone you don't 
-    want to unfollow if they aren't following you.
+    You can add '[:-50]' to end of friends if you want to start after first 50 people following
+    Make sure to whitelist the usernames you don't want to unfollow. Example: elonmusk
     '''
-    for friend in friends[:-50]:
+    for friend in friends:
         try:
             if (
                 api.get_user(friend).screen_name
