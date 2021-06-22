@@ -1,7 +1,7 @@
 # your twitter username
 twitter_username = ""
 
-# your api details ↓↓↓
+# your api details 
 api_key = ""
 api_secret = ""
 access_token = ""
@@ -19,7 +19,6 @@ search_d = "#CardanoCommunity"
 search_e = "#CardanoFamily"
 search_f = "#CNTF"
 search_query = f"{search_a} OR {search_b} OR {search_c} OR {search_d} OR {search_e} OR {search_f}"
-
 
 # for people who don't follow you back but you don't want to unfollow
 whitelisted_usernames_unfollow_script = {
