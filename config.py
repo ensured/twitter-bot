@@ -22,7 +22,7 @@ search_query = f"{search_a} OR {search_b} OR {search_c} OR {search_d} OR {search
 
 
 # for people who don't follow you back but you don't want to unfollow
-whitelisted_usernames_unfollow_script = (
+whitelisted_usernames_unfollow_script = {
     "CardanoMonsters",
     "adapools_org",
     "cardano_updates",
@@ -30,16 +30,16 @@ whitelisted_usernames_unfollow_script = (
     "CardanoStiftung",
     "YoroiWallet",
     "cardacitynft",
-)
+}
 # for people who you want nothing to do with :)
-blacklisted_usernames_follow_unfollow_scripts = (
+blacklisted_usernames_follow_unfollow_scripts = {
     "NewCryptoBonus1",
     "DesireRugema",
     "doctorkevin",
-)
+}
 
 # hashtags to blacklist (doesn't have to be hashtag, can be keyword)
-blacklisted_hashtags_for_twitter_bot = (
+blacklisted_hashtags_for_twitter_bot = {
     "fiewin.com",
     "#Corona",
     "Price:",
@@ -73,10 +73,10 @@ blacklisted_hashtags_for_twitter_bot = (
     "#Binance",
     "#BNB",
     "#DOGE",
-)
+}
 
 # blacklisted people here
-blacklisted_usernames_for_twitter_bot = (
+blacklisted_usernames_for_twitter_bot = {
     "topstonks",
     "chaintoday1",
     "CardanoPoolPeek",
@@ -88,4 +88,4 @@ blacklisted_usernames_for_twitter_bot = (
     "BalanceOt",
     "LacedWhales",
     "topcryptostats",
-)
+}
