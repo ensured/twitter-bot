@@ -12,12 +12,7 @@ from config import (
     api_secret,
     access_token,
     access_token_secret,
-    search_a,
-    search_b,
-    search_c,
-    search_d,
-    search_e,
-    search_f,
+    search,
     amount_of_posts_to_get,
     search_query,
 )
@@ -30,7 +25,7 @@ api = tw.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 def fav_and_retweet():
     for tweet in tw.Cursor(
         api.search,
-        q=query,
+        q=search,
         lang="en",
     ).items(amount_of_posts_to_get):
         sleep(1)
