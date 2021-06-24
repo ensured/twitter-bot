@@ -11,14 +11,17 @@ access_token_secret = ""
 # the larger the number the farther back the tweets you get will be (time wise)
 amount_of_posts_to_get = 15
 
-# enter as many hashtags as you want (may need to update twitter_bot.py with the added or removed values)
-search_a = "#CardanoNFT"
-search_b = "#ADA"
-search_c = "#Cardano"
-search_d = "#CardanoCommunity"
-search_e = "#CardanoFamily"
-search_f = "#CNTF"
-search_query = f"{search_a} OR {search_b} OR {search_c} OR {search_d} OR {search_e} OR {search_f}"
+# enter as many hashtags here as you want
+hashtags = [
+    "#CardanoNFT",
+    "#ADA",
+    "#CardanoCommunity",
+    "#CardanoFamily",
+    "#CNTF",
+    "$ADA",
+    "@cryptorecruitr",
+]
+search = " OR ".join(hashtags)  # ignore this
 
 # for people who don't follow you back but you don't want to unfollow
 whitelisted_usernames_unfollow_script = {
