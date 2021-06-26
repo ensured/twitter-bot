@@ -31,29 +31,8 @@ def fav_and_retweet():
         sleep(1)
         try:
             a = api.get_status(tweet.id, tweet_mode="extended")
-            # print(a.full_text)
             a = json.dumps(a._json)
             a = json.loads(a)
-
-            # posts_hashtags = []
-            # for k in a["entities"]["hashtags"]:
-            #     posts_hashtags.append(k["text"])
-            # if len(posts_hashtags) >= 1:
-            #     print(*posts_hashtags, sep=", ")
-            # else:
-            #     print("no hashtags found")
-
-            # datetime stuff to make sure we aren't getting tweets from 15+ days ago (haven't got to finishing)
-            # tod = datetime.datetime.now()
-            # d = datetime.timedelta(days=15)
-            # fifteen_days_ago = tod - d
-            # if tweet.created_at > fifteen_days_ago:
-            #     print(tweet.created_at)
-            #     print("tweet within the last 15 days")
-            # else:
-            #     print(tweet.created_at)
-            #     print("tweet not within the last 15 days")
-            # sleep(3)
 
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
@@ -86,10 +65,7 @@ def fav_and_retweet():
                     print(
                         f"🟢 Liked & Retweeted @{tweet.user.screen_name}'s Tweet https://twitter.com/twitter/statuses/{tweet.id} at {current_time}"
                     )
-                    # playsound("/home/will/Desktop/twitter bot/4phones.mp3")
-                    # webbrowser.open(f"https://twitter.com/twitter/statuses/{tweet.id}")
                     sleep(random.randint(140, 180))
-                    # os.system("kill $(pidof firefox)")
                 except tw.TweepError as err:
                     print(err)
                 except:
