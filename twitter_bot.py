@@ -3,8 +3,6 @@ from time import sleep
 import json
 import random
 from datetime import datetime
-
-# from playsound import playsound
 from config import (
     blacklisted_hashtags_for_twitter_bot,
     blacklisted_usernames_for_twitter_bot,
@@ -16,11 +14,9 @@ from config import (
     amount_of_posts_to_get,
     search_query,
 )
-
 auth = tw.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
-
 
 def fav_and_retweet():
     for tweet in tw.Cursor(
@@ -58,7 +54,7 @@ def fav_and_retweet():
             else:
                 try:
                     tweet.favorite()
-                    sleep(random.randint(1, 6))
+                    sleep(random.randint(2, 6))
                     tweet.retweet()
                     now = datetime.now()
                     current_time = now.strftime("%I:%M:%S%p")
