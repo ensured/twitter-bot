@@ -32,7 +32,7 @@ def fav_and_retweet():
 
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
-                    a = a["retweeted_status"]["full_text"]
+                a = a["retweeted_status"]["full_text"]
             else:
                 a = a["full_text"]
 
