@@ -32,10 +32,7 @@ def fav_and_retweet():
 
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
-                try:
                     a = a["retweeted_status"]["full_text"]
-                except:
-                    pass
             else:
                 a = a["full_text"]
 
@@ -62,7 +59,7 @@ def fav_and_retweet():
                     print(
                         f"🟢 Liked & Retweeted @{tweet.user.screen_name}'s Tweet https://twitter.com/twitter/statuses/{tweet.id} at {current_time}"
                     )
-                    sleep(random.randint(140, 180))
+                    sleep(random.randint(180, 200))
                 except tw.TweepError as err:
                     print(err)
                 except:
@@ -74,15 +71,3 @@ def fav_and_retweet():
 if __name__ == "__main__":
     while True:
         fav_and_retweet()
-        print("sleeping 5 seconds..")
-        import sys
-        import time
-        from os import system
-
-        clear = lambda: system("clear")
-
-        for i in range(random.randint(1, 10), 0, -1):
-            sys.stdout.write(f"sleeping for {str(i)}")
-            sys.stdout.flush()
-            time.sleep(1)
-            clear()
