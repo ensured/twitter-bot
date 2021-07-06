@@ -45,11 +45,12 @@ def fav_and_retweet():
                 for hashtag in blacklisted_hashtags_for_twitter_bot
                 if hashtag in a
             }
-            if len(hashtags) >= 1:
-                print(f"🔴 {hashtags} found in @{tweet.user.screen_name}'s Tweet")
+            if (
+                tweet.user.screen_name in blacklisted_usernames_for_twitter_bot
+                or str(tweet._json) in blacklisted_usernames_for_twitter_bot
+            ):
                 continue
-            if tweet.user.screen_name in blacklisted_usernames_for_twitter_bot:
-                print(f"🔴 Blacklisted username found ({tweet.user.screen_name})")
+            elif len(hashtags) >= 1:
                 continue
             else:
                 try:
