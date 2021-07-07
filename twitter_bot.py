@@ -32,7 +32,11 @@ def fav_and_retweet():
 
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
-                a = a["retweeted_status"]["full_text"]
+                try:
+                    a = a["retweeted_status"]["full_text"]
+                except Exception as ee:
+                    with open("error_log.txt", "a+") as file:
+                        file.write(str(ee) + "\n")
             else:
                 a = a["full_text"]
 
