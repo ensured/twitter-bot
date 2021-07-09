@@ -12,7 +12,6 @@ auth = tweepy.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-
 def autofollow():
     for follower in tweepy.Cursor(api.followers).items():
         try:
@@ -32,7 +31,4 @@ def autofollow():
 
 
 if __name__ == "__main__":
-    while True:
-        autofollow()
-        print("(sleeping 900 seconds)")
-        sleep(900)
+  autofollow()
