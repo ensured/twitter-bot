@@ -7,8 +7,7 @@ api_secret = ""
 access_token = ""
 access_token_secret = ""
 
-# amount of posts to get before rerunning the function 'fav_and_retweet()'
-# the larger the number the farther back the tweets you get will be (time wise)
+# usually the higher this number is the farther back in time it will pull tweets from
 amount_of_posts_to_get = 15
 
 # enter as many hashtags here as you want
@@ -38,7 +37,7 @@ blacklisted_usernames_follow_unfollow_scripts = {
     "doctorkevin",
 }
 
-# hashtags to blacklist (doesn't have to be hashtag, can be keyword)
+# they don't have to be hashtags, can be keywords too
 blacklisted_hashtags_for_twitter_bot = {
     "Price:",
     "#SAFEMOON",
