@@ -21,14 +21,26 @@ def autofollow():
                     in blacklisted_usernames_follow_unfollow_scripts
                 ):
                     print(f"🔴 @{follower.screen_name} in the blacklist")
+                    continue
                 else:
                     follower.follow()
                     print(f"🟢 Followed @{follower.screen_name}")
+                    try:
+                        media = api.media_upload(filename="your_media_goes_here.gif")
+                        api.send_direct_message(
+                            follower.id,
+                            f"[Automated Message]\n\nThanks for the follow @{follower.screen_name}!\nwrite whatever you want",
+                            attachment_type="media",
+                            attachment_media_id=media.media_id,
+                        )
+                    except:
+                        print("something is not working as expected.")
+                    with open("autofollowed.txt", "a+") as f:
+                        f.write(f"{follower.screen_name}\n")
             else:
-                print(f"🔴 @{follower.screen_name} already following me")
+                continue
         except tweepy.TweepError as e:
             print(e)
-
 
 if __name__ == "__main__":
   autofollow()
