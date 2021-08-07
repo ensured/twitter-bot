@@ -54,7 +54,6 @@ blacklisted_hashtags_for_twitter_bot = {
 blacklisted_usernames_for_twitter_bot = {
     "topstonks",
     "chaintoday1",
-    "CardanoPoolPeek",
     "adawow_io",
     "LacedWhales",
     "Nathan_Combs_",
