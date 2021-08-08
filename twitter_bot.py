@@ -30,11 +30,6 @@ def fav_and_retweet():
             a = json.dumps(a._json)
             a = json.loads(a)
             # print(a)
-            
-            # uncomment this if you don't want to retweet/like replies to a tweet.
-#             if a["in_reply_to_screen_name"]:
-#                 print(f'skipping reply to {a["in_reply_to_screen_name"]}')
-#                 continue
 
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
