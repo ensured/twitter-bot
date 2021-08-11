@@ -41,12 +41,14 @@ def fav_and_retweet():
             else:
                 a = a["full_text"]
 
-            # filter only tweets that contain 1 or more blacklisted hashtag
+ 
             hashtags = {
                 hashtag
                 for hashtag in blacklisted_hashtags_for_twitter_bot
                 if hashtag in a
             }
+
+            # skip tweets that contain 1 or more blacklisted hashtag
             if (
                 tweet.user.screen_name in blacklisted_usernames_for_twitter_bot
                 or str(tweet._json) in blacklisted_usernames_for_twitter_bot
@@ -68,7 +70,7 @@ def fav_and_retweet():
                 except tw.TweepError as err:
                     print(err)
                 except:
-                    print("✘ Something else went wrong.")
+                    print("Something went wrong.")
         except tw.TweepError as e:
             print(e)
 
