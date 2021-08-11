@@ -24,7 +24,6 @@ def fav_and_retweet():
         q=search,
         lang="en",
     ).items(amount_of_posts_to_get):
-        sleep(1)
         try:
             a = api.get_status(tweet.id, tweet_mode="extended")
             a = json.dumps(a._json)
@@ -41,7 +40,6 @@ def fav_and_retweet():
             else:
                 a = a["full_text"]
 
- 
             hashtags = {
                 hashtag
                 for hashtag in blacklisted_hashtags_for_twitter_bot
