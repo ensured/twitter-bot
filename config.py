@@ -10,6 +10,9 @@ access_token_secret = ""
 # usually the higher this number is the farther back in time it will pull tweets from
 amount_of_posts_to_get = 15
 
+# Like and Retweet tweets that are replies to tweets
+like_and_retweet_replies = False
+
 # enter as many hashtags here as you want
 hashtags = [
     "#CardanoNFT",
