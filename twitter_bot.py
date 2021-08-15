@@ -29,6 +29,12 @@ def fav_and_retweet():
             a = json.dumps(a._json)
             a = json.loads(a)
             # print(a)
+            
+            if a["in_reply_to_screen_name"] and not like_retweet_replies:
+                print(
+                    f'found reply tweet: @{a["in_reply_to_screen_name"]} and like_retweet_replies = False'
+                )
+                continue
 
             # get full text of tweet/retweet so we can filter later
             if "…" in a["full_text"]:
