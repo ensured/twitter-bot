@@ -26,6 +26,7 @@ def fav_and_retweet():
         lang="en",
     ).items(amount_of_posts_to_get):
         try:
+            sleep(1)
             a = api.get_status(tweet.id, tweet_mode="extended")
             a = json.dumps(a._json)
             a = json.loads(a)
@@ -65,14 +66,14 @@ def fav_and_retweet():
             else:
                 try:
                     tweet.favorite()
-                    sleep(random.randint(2, 6))
+                    sleep(2)
                     tweet.retweet()
                     now = datetime.now()
                     current_time = now.strftime("%I:%M:%S%p")
                     print(
                         f"🟢 Liked & Retweeted @{tweet.user.screen_name}'s Tweet https://twitter.com/twitter/statuses/{tweet.id} at {current_time}"
                     )
-                    sleep(random.randint(180, 200))
+                    sleep(260)
                 except tw.TweepError as err:
                     print(err)
                 except:
