@@ -11,8 +11,9 @@ from config import (
     access_token,
     access_token_secret,
     search,
-    amount_of_posts_to_get,
-    search_query,
+    num_posts_to_get,
+    like_and_retweet_replies,
+    like_and_retweet_retweets,
 )
 auth = tw.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -30,10 +31,11 @@ def fav_and_retweet():
             a = json.loads(a)
             # print(a)
             
-            if a["in_reply_to_screen_name"] and not like_retweet_replies:
-                print(
-                    f'found reply tweet: @{a["in_reply_to_screen_name"]} and like_retweet_replies = False'
-                )
+            if a["in_reply_to_screen_name"] and not like_and_retweet_replies:
+                print(f"skipping - like_and_retweet_replies is set to False")
+                continue
+            if "RT @" in str(tweet._json) and not like_and_retweet_retweets:
+                print("skipping - like_and_retweet_retweets is set to false")
                 continue
 
             # get full text of tweet/retweet so we can filter later
