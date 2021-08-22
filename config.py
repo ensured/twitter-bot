@@ -19,7 +19,7 @@ hashtags = [
     "#ADA",
     "#CardanoCommunity",
     "#CardanoFamily",
-    "#CNTF",
+    "#CNFT",
 ]
 search = " OR ".join(hashtags)  # ignore this
 
