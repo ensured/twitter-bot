@@ -9,6 +9,7 @@ access_token_secret = ""
 
 # usually the higher this number is the farther back in time it will pull tweets from
 num_posts_to_get = 15
+amount_of_mutual_followers = 8  # amount of mutual followers to check for before deciding to retweet or not
 
 like_and_retweet_replies = False
 like_and_retweet_retweets = False
