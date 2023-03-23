@@ -5,16 +5,16 @@ from twitter_configs.blacklisted_usernames_follow_unfollow_scripts import (
 from twitter_configs.whitelisted_usernames_unfollow_script import (
     whitelisted_usernames_unfollow_script,
 )
-
-api_key = ""
-api_secret = ""
-access_token = ""
-access_token_secret = ""
+from twitter_configs import (
+    api_key,
+    api_secret,
+    access_token,
+    access_token_secret
+)
 
 auth = tweepy.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
-
 
 my_screen_name = api.me().screen_name
 for friend in tweepy.Cursor(api.friends).items():
